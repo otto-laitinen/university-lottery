@@ -8,18 +8,26 @@ import sys
 sys.path.append(path.abspath("./Classes"))
 
 from Classes.personClass import Person
+from Classes.studentClass import Student
+from Classes.teacherClass import Teacher
 from Classes.universityClass import University
+
+# from Classes.lotteryticketClass import
 
 
 def main():
-    university = University("TUAS")  # test
+    university = University("TUAS")
     print(university.name)
 
-    students = []
-    teachers = []
-    other_people = []
+    students = [Student("James", "Jameson", 24, university, "student")]
+    teachers = [Teacher("Jon", "Jones", 49, university, "teacher")]
+    other_people = [Person("Emma", "Li", 20)]
     all_contestants = students + teachers + other_people
-    lottery_tickets = []
+
+    for i in all_contestants:
+        print(i.get_first_name())
+
+    # lottery_tickets = []
 
     # function here to define the winner
 
