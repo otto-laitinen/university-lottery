@@ -18,7 +18,7 @@ from lottery_function import lottery
 def main():
     university = University("TUAS")
 
-    students = [Student("James", "Jameson", 24, None, university, "student")]
+    students = [Student("James", "Jameson", 17, None, university, "student")]
     teachers = [Teacher("Jon", "Jones", 49, None, university, "teacher")]
     other_people = [Person("Emma", "Li", 20, None)]
     all_contestants = students + teachers + other_people
