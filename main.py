@@ -12,6 +12,7 @@ from Classes.studentClass import Student
 from Classes.teacherClass import Teacher
 from Classes.universityClass import University
 from Classes.lotteryticketClass import Lotteryticket
+from lottery_function import lottery
 
 
 def main():
@@ -29,7 +30,7 @@ def main():
     lottery_tickets = [Lotteryticket]
     print(lottery_tickets[0])
 
-    # function here to define the winner
+    lottery()
 
 
 main()

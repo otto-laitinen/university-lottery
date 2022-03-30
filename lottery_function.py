@@ -1,0 +1,2 @@
+def lottery():
+    print("hi")
