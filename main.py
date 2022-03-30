@@ -12,10 +12,16 @@ from Classes.studentClass import Student
 from Classes.teacherClass import Teacher
 from Classes.universityClass import University
 from Classes.lotteryticketClass import Lotteryticket
+
 from lottery_function import lottery
+from price import price
 
 
 def main():
+    # Example:
+    # with open("first_names.txt", "r") as a:
+    #     first_names = a.readlines()
+
     university = University("TUAS")
 
     students = [Student("James", "Jameson", 17, None, university, "student")]
@@ -25,7 +31,10 @@ def main():
 
     winner = lottery(all_contestants)
 
-    print(f"winner is {winner.get_first_name()}")
+    print(f"Winner is: {winner.get_first_name()} {winner.get_last_name()}")
+
+    # give price
+    price(winner)
 
 
 main()
