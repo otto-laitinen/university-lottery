@@ -20,7 +20,7 @@ def main():
 
     students = [Student("James", "Jameson", 24, None, university, "student")]
     teachers = [Teacher("Jon", "Jones", 49, None, university, "teacher")]
-    other_people = [Person("Emma", "Li", 20, None)]
+    other_people = [Person("Emma", "Li", 16, None)]
     all_contestants = students + teachers + other_people
 
     winner = lottery(all_contestants)
