@@ -16,12 +16,12 @@ from Classes.lotteryticketClass import Lotteryticket
 from lottery_function import lottery
 from price import price
 
-#opens frist names text file, which is located in the same directory
-with open("first_names.txt","r") as a:
-    #reads all of the lines and splits them at the brake, stores in list
+# opens frist names text file, which is located in the same directory
+with open("first_names.txt", "r") as a:
+    # reads all of the lines and splits them at the brake, stores in list
     first_names = [line.strip() for line in a]
 
-with open("last_names.txt","r") as b:
+with open("last_names.txt", "r") as b:
     last_names = [line.strip() for line in b]
 
 
@@ -39,12 +39,5 @@ def main():
     # give and print price
     price(winner)
 
+
 main()
-<<<<<<< HEAD
-
-
-# for i in range(100):
-#     some_object = Student(random.choice(first_name), randmon.choice(last_names) .........)
-#     students.append(some_object)
-=======
->>>>>>> 09d28531ad242e1c49dee7ddb79059d07ab1b2e2
