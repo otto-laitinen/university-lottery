@@ -25,7 +25,7 @@ def main():
 
     winner = lottery(all_contestants)
 
-    print(f"winner is {winner.get_first_name()}")
+    print(f"Winner is: {winner.get_first_name()} {winner.get_last_name()}")
 
 
 main()
