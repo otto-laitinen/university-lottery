@@ -2,6 +2,7 @@
 # Author: (use your name, of course)
 # Description: Main function for the university lottery.
 
+import random
 from os import path
 import sys
 
@@ -31,6 +32,18 @@ def main():
     teachers = [Teacher("Jon", "Jones", 49, None, university, "teacher")]
     other_people = [Person("Emma", "Li", 16, None)]
     all_contestants = students + teachers + other_people
+
+    for i in range(100):
+        
+        the_random = Student(random.choice(first_names), random.choice(last_names), random.randint(15,100), None, university, "student")
+        students.append(the_random)
+    
+        the_random2 = Teacher(random.choice(first_names), random.choice(last_names), random.randint(15,100), None, university, "teacher")
+        students.append(the_random2)
+  
+        the_random3 = Person(random.choice(first_names), random.choice(last_names), random.randint(15,100), None)
+        students.append(the_random3)
+
 
     winner = lottery(all_contestants)
 
