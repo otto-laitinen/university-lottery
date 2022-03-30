@@ -18,11 +18,11 @@ from price import price
 
 #opens frist names text file, which is located in the same directory
 with open("first_names.txt","r") as a:
-    #reads all of the lines and splits it by brake
-    first_names = a.readlines()
+    #reads all of the lines and splits them at the brake, stores in list
+    first_names = [line.strip() for line in a]
 
 with open("last_names.txt","r") as b:
-    last_names = b.readlines()
+    last_names = [line.strip() for line in b]
 
 def main():
     university = University("TUAS")
@@ -38,6 +38,5 @@ def main():
 
     # give price
     price(winner)
-
 
 main()
