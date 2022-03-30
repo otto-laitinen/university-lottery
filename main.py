@@ -16,12 +16,15 @@ from Classes.lotteryticketClass import Lotteryticket
 from lottery_function import lottery
 from price import price
 
+#opens frist names text file, which is located in the same directory
+with open("first_names.txt","r") as a:
+    #reads all of the lines and splits it by brake
+    first_names = a.readlines()
+
+with open("last_names.txt","r") as b:
+    last_names = b.readlines()
 
 def main():
-    # Example:
-    # with open("first_names.txt", "r") as a:
-    #     first_names = a.readlines()
-
     university = University("TUAS")
 
     students = [Student("James", "Jameson", 17, None, university, "student")]
