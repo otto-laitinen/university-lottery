@@ -38,3 +38,9 @@ def main():
 
 
 main()
+
+
+
+# for i in range(100):
+#     some_object = Student(random.choice(first_name), randmon.choice(last_names) .........)
+#     students.append(some_object)
