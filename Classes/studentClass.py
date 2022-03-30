@@ -9,8 +9,8 @@ import personClass
 class Student(personClass.Person):
 
     # initializes the different methods + inherited ones from personClass
-    def __init__(self, first_name, last_name, age, institute, role):
-        personClass.Person.__init__(self, first_name, last_name, age)
+    def __init__(self, first_name, last_name, age, tickets, institute, role):
+        personClass.Person.__init__(self, first_name, last_name, age, tickets)
         self.__institute = institute
         self.__role = role
 
