@@ -1,10 +1,6 @@
 import random
 
+
 class Lotteryticket:
-    
-    def __init__(self):
-        self.id = 0
-
-
-
-
+    def __init__(self, id):
+        self.id = None
