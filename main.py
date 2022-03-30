@@ -17,20 +17,15 @@ from lottery_function import lottery
 
 def main():
     university = University("TUAS")
-    print(university.name)
 
-    students = [Student("James", "Jameson", 24, university, "student")]
-    teachers = [Teacher("Jon", "Jones", 49, university, "teacher")]
-    other_people = [Person("Emma", "Li", 20)]
+    students = [Student("James", "Jameson", 24, None, university, "student")]
+    teachers = [Teacher("Jon", "Jones", 49, None, university, "teacher")]
+    other_people = [Person("Emma", "Li", 20, None)]
     all_contestants = students + teachers + other_people
 
-    for i in all_contestants:
-        print(i.get_first_name())
+    winner = lottery(all_contestants)
 
-    lottery_tickets = [Lotteryticket]
-    print(lottery_tickets[0])
-
-    lottery()
+    print(f"winner is {winner.get_first_name()}")
 
 
 main()
