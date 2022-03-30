@@ -1,8 +1,6 @@
 # File name: personClass.py
 # Author: (use your name, of course)
 # Description: Defines the attributes of a  Person.
-
-
 class Person:
     def __init__(
         self,
