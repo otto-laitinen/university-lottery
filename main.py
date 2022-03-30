@@ -29,10 +29,9 @@ with open("last_names.txt", "r") as b:
 def main():
     university = University("TUAS")
 
-    students = [Student("James", "Jameson", 17, None, university, "student")]
-    teachers = [Teacher("Jon", "Jones", 49, None, university, "teacher")]
-    other_people = [Person("Emma", "Li", 16, None)]
-    all_contestants = students + teachers + other_people
+    students = []
+    teachers = []
+    other_people = []
 
     for i in range(100):
         
@@ -40,11 +39,12 @@ def main():
         students.append(the_random)
     
         the_random2 = Teacher(random.choice(first_names), random.choice(last_names), random.randint(15,100), None, university, "teacher")
-        students.append(the_random2)
+        teachers.append(the_random2)
   
         the_random3 = Person(random.choice(first_names), random.choice(last_names), random.randint(15,100), None)
-        students.append(the_random3)
+        other_people.append(the_random3)
 
+    all_contestants = students + teachers + other_people
 
     winner = lottery(all_contestants)
 
