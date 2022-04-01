@@ -65,6 +65,7 @@ def main():
 
     all_contestants = students + teachers + other_people
 
+    # Draw the winner
     winner = lottery(all_contestants)
 
     print(f"Winner is: {winner.get_first_name()} {winner.get_last_name()}")

@@ -4,7 +4,6 @@
 # defines attributes of students
 
 import personClass
-# import universityClass
 
 
 class Student(personClass.Person):

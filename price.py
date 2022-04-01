@@ -4,6 +4,8 @@ from Classes.teacherClass import Teacher
 
 
 def price(winner, university):
+
+    # If winner is a student --> give extra credit
     if isinstance(winner, Student):
         print(f"Winner is a student with {winner.get_credits()} credits")
         winner.set_credits(winner.get_credits() + 1)
@@ -11,6 +13,7 @@ def price(winner, university):
             f"{winner.get_first_name()} receives 1 extra credit! New credits: {winner.get_credits()} "
         )
 
+    # If winner is a teacher --> give extra day off
     elif isinstance(winner, Teacher):
         print(f"Winner is a teacher with {winner.get_days_off()} days off")
         winner.set_days_off(winner.get_days_off() + 1)
@@ -18,8 +21,8 @@ def price(winner, university):
             f"{winner.get_first_name()} receives 1 extra day off! New amount of days off: {winner.get_days_off()} "
         )
 
+    # If winner is a regular person --> give them a study place
     else:
-        # Make the Person class object a Student class object (with 0 credits)
         winner = Student(
             winner.get_first_name(),
             winner.get_last_name(),

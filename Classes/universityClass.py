@@ -6,8 +6,8 @@
 class University:
     def __init__(self, name):
         self.set_name(name)
-        self.students = []  # list of Student objects
-        self.teachers = []  # list of Teacher objects
+        self.students = []
+        self.teachers = []
 
     def set_name(self, name):
         self.name = name

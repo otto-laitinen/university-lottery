@@ -13,7 +13,7 @@ def lottery(contestants):
             contestant.set_tickets(Lotteryticket(id))
             id += 1
 
-    # Define a list of contestants that are not old enough to participate
+    # List of contestants that are not old enough to participate
     amount_of_underage = len(underage_contestants)
     print(f"{amount_of_underage} underage contestants removed from the lottery")
 
