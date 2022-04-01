@@ -28,9 +28,9 @@ with open("last_names.txt", "r") as b:
 
 def main():
     while True:
-        print("#### Welcome to TUAS lottery of 2022! ####")
+        print("                 #### Welcome to TUAS lottery of 2022! ####")
         print(
-            "#### The contestants are students,teachers and people from outside the university. ####"
+            "#### The contestants are students,teachers and people from outside the university. ####\n"
         )
         university = University("TUAS")
 
