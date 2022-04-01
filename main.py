@@ -27,53 +27,71 @@ with open("last_names.txt", "r") as b:
 
 
 def main():
-    print("#### Welcome to TUAS lottery of 2022! ####")
-    print("#### The contestants are students,teachers and people from outside the university. ####")
-    university = University("TUAS")
-
-    students = []
-    teachers = []
-    other_people = []
-
-    for i in range(100):
-
-        the_random = Student(
-            random.choice(first_names),
-            random.choice(last_names),
-            random.randint(15, 100),
-            None,
-            university,
-            random.randint(0, 250),
+    while True:
+        print("#### Welcome to TUAS lottery of 2022! ####")
+        print(
+            "#### The contestants are students,teachers and people from outside the university. ####"
         )
-        students.append(the_random)
+        university = University("TUAS")
 
-        the_random2 = Teacher(
-            random.choice(first_names),
-            random.choice(last_names),
-            random.randint(15, 100),
-            None,
-            university,
-            random.randint(0, 7),
-        )
-        teachers.append(the_random2)
+        students = []
+        teachers = []
+        other_people = []
 
-        the_random3 = Person(
-            random.choice(first_names),
-            random.choice(last_names),
-            random.randint(15, 100),
-            None,
-        )
-        other_people.append(the_random3)
+        for i in range(100):
 
-    all_contestants = students + teachers + other_people
+            the_random = Student(
+                random.choice(first_names),
+                random.choice(last_names),
+                random.randint(15, 100),
+                None,
+                university,
+                random.randint(0, 250),
+            )
+            students.append(the_random)
 
-    # Draw the winner
-    winner = lottery(all_contestants)
+            the_random2 = Teacher(
+                random.choice(first_names),
+                random.choice(last_names),
+                random.randint(15, 100),
+                None,
+                university,
+                random.randint(0, 7),
+            )
+            teachers.append(the_random2)
 
-    print(f"Winner is: {winner.get_first_name()} {winner.get_last_name()}")
+            the_random3 = Person(
+                random.choice(first_names),
+                random.choice(last_names),
+                random.randint(15, 100),
+                None,
+            )
+            other_people.append(the_random3)
 
-    # Give the winner a price
-    price(winner, university)
+        all_contestants = students + teachers + other_people
+
+        # Draw the winner
+        winner = lottery(all_contestants)
+
+        print(f"Winner is: {winner.get_first_name()} {winner.get_last_name()}")
+
+        # Give the winner a price
+        price(winner, university)
+
+        # Play again
+        while True:
+            play_again = input("Play again? (Y for Yes, N for No): ")
+            if play_again.lower() == "y":  # Accepts either Y or y
+                play_again = True
+                break
+            elif play_again.lower() == "n":
+                play_again = False
+                break
+            else:
+                print("Enter either Y or N")
+
+        if not play_again:
+            break
 
 
 main()
