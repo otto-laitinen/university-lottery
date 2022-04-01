@@ -4,8 +4,6 @@ from Classes.teacherClass import Teacher
 
 
 def price(winner):
-    print(f"hi {winner.get_first_name()}")
-
     if isinstance(winner, Student):
         print(f"{winner.get_first_name()} is a student")
 
