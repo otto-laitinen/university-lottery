@@ -1,3 +1,6 @@
+# File name: lottery_function.py
+# Author: (use your name, of course)
+# Description: Main function for the university lottery.
 from Classes.lotteryticketClass import Lotteryticket
 import random
 

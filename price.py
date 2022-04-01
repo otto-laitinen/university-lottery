@@ -1,3 +1,6 @@
+# File name: price.py
+# Author: (use your name, of course)
+# Description: Main function for the university lottery.
 from Classes.personClass import Person
 from Classes.studentClass import Student
 from Classes.teacherClass import Teacher
