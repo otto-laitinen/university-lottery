@@ -1,0 +1,69 @@
+<diagram program="umletino" version="14.4.0-SNAPSHOT"><zoom_level>10</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>410</x><y>0</y><w>250</w><h>240</h></coordinates><panel_attributes>Person class
+--
+__self
+__first_name
+__last_name
+__age
+__tickets
+--
+__init__ (first_name, last_name, age, tickets)
+set_first_name
+get_first_name
+set_last_name
+get_last_name
+set_age
+get_age
+set_tickets
+get_tickets&lt;/panel_attributes&gt;&lt;additional_attributes&gt;&lt;/additional_attributes&gt;&lt;/element&gt;&lt;/diagram&gt;Person class
+
+--
+__self
+__first_name
+__last_name
+__age
+__tickets
+--
+__init__ (first_name, last_name, age, tickets)
+set_first_name
+get_first_name
+set_last_name
+get_last_name
+set_age
+get_age
+set_tickets
+get_tickets</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>210</x><y>350</y><w>220</w><h>140</h></coordinates><panel_attributes>Student class
+--
+__institute
+__credits
+--
+__init__(institute, credits)
+set_institute
+get_institute
+set_credits
+get_credits</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>640</x><y>350</y><w>220</w><h>120</h></coordinates><panel_attributes>Teacher class
+--
+__institute
+__days_off
+--
+set_institute
+get_institute
+set_days_off
+get_days_off
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>520</x><y>230</y><w>30</w><h>90</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;70</additional_attributes></element><element><id>Relation</id><coordinates><x>520</x><y>281</y><w>250</w><h>40</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;20;230;20</additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>281</y><w>250</w><h>40</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;20;230;20</additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>291</y><w>30</w><h>80</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>Relation</id><coordinates><x>740</x><y>291</y><w>30</w><h>80</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;10;60</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>91</y><w>250</w><h>60</h></coordinates><panel_attributes>Loterry Ticket Class
+--
+__self
+__id
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>406</x><y>621</y><w>250</w><h>240</h></coordinates><panel_attributes>University class
+--
+__self
+__name
+--
+__init__ (name)
+set_name
+get_fname
+set_add_student
+get_delete_students
+set_add_teacher
+get_delete_teachers
+set_tickets
+get_tickets</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>240</x><y>110</y><w>190</w><h>40</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;20;170;20</additional_attributes></element><element><id>Relation</id><coordinates><x>520</x><y>572</y><w>30</w><h>70</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>561</y><w>250</w><h>40</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;20;230;20</additional_attributes></element><element><id>Relation</id><coordinates><x>520</x><y>561</y><w>250</w><h>40</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;20;230;20</additional_attributes></element><element><id>Relation</id><coordinates><x>740</x><y>461</y><w>30</w><h>140</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;10;120</additional_attributes></element><element><id>Relation</id><coordinates><x>300</x><y>481</y><w>30</w><h>120</h></coordinates><panel_attributes></panel_attributes><additional_attributes>10;10;10;100</additional_attributes></element></diagram>
