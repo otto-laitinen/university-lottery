@@ -5,6 +5,7 @@
 import random
 from os import path
 import sys
+from playsound import playsound
 
 sys.path.append(path.abspath("./Classes"))
 
@@ -72,6 +73,8 @@ def main():
 
         # Draw the winner
         winner = lottery(all_contestants)
+
+        playsound('/Lottery-horns.wav')
 
         print(f"Winner is: {winner.get_first_name()} {winner.get_last_name()}")
 
