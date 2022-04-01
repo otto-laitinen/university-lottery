@@ -9,21 +9,21 @@ import personClass
 class Teacher(personClass.Person):
 
     # initializes the different methods + inherited ones from personClass
-    def __init__(self, first_name, last_name, age, tickets, institute, role):
+    def __init__(self, first_name, last_name, age, tickets, institute, days_off):
         personClass.Person.__init__(self, first_name, last_name, age, tickets)
         self.__institute = institute
-        self.__role = role
+        self.__days_off = days_off
+        # Adds this instance of Teacher to University's (institute's) list of teachers
+        institute.add_teacher(self)
 
-    # sets institute and role
     def set_institute(self, institute):
         self.__institute = institute
 
-    def set_role(self, role):
-        self.__role = role
+    def set_days_off(self, days_off):
+        self.__days_off = days_off
 
-    # gets institute and role
     def get_institute(self):
         return self.__institute
 
-    def get_role(self):
-        return self.__role
+    def get_days_off(self):
+        return self.__days_off

@@ -34,23 +34,44 @@ def main():
     other_people = []
 
     for i in range(100):
-        
-        the_random = Student(random.choice(first_names), random.choice(last_names), random.randint(15,100), None, university, "student")
+
+        the_random = Student(
+            random.choice(first_names),
+            random.choice(last_names),
+            random.randint(15, 100),
+            None,
+            university,
+            random.randint(0, 250),
+        )
         students.append(the_random)
-    
-        the_random2 = Teacher(random.choice(first_names), random.choice(last_names), random.randint(15,100), None, university, "teacher")
+
+        the_random2 = Teacher(
+            random.choice(first_names),
+            random.choice(last_names),
+            random.randint(15, 100),
+            None,
+            university,
+            random.randint(0, 7),
+        )
         teachers.append(the_random2)
-  
-        the_random3 = Person(random.choice(first_names), random.choice(last_names), random.randint(15,100), None)
+
+        the_random3 = Person(
+            random.choice(first_names),
+            random.choice(last_names),
+            random.randint(15, 100),
+            None,
+        )
         other_people.append(the_random3)
 
     all_contestants = students + teachers + other_people
 
+    # Draw the winner
     winner = lottery(all_contestants)
 
     print(f"Winner is: {winner.get_first_name()} {winner.get_last_name()}")
-    # give and print price
-    price(winner)
+
+    # Give the winner a price
+    price(winner, university)
 
 
 main()
