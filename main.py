@@ -65,10 +65,14 @@ def main():
 
     all_contestants = students + teachers + other_people
 
+    print(university.get_students())
+    print(university.get_teachers())
+
     winner = lottery(all_contestants)
 
     print(f"Winner is: {winner.get_first_name()} {winner.get_last_name()}")
-    # give and print price
+
+    # Give the winner a price
     price(winner)
 
 

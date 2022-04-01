@@ -4,6 +4,7 @@
 # defines attributes of students
 
 import personClass
+# import universityClass
 
 
 class Student(personClass.Person):
@@ -13,6 +14,8 @@ class Student(personClass.Person):
         personClass.Person.__init__(self, first_name, last_name, age, tickets)
         self.__institute = institute
         self.__credits = credits
+        # Adds this instance of Student to University's (institute's) list of students
+        institute.add_student(self)
 
     def set_institute(self, institute):
         self.__institute = institute

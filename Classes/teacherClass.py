@@ -13,6 +13,8 @@ class Teacher(personClass.Person):
         personClass.Person.__init__(self, first_name, last_name, age, tickets)
         self.__institute = institute
         self.__days_off = days_off
+        # Adds this instance of Teacher to University's (institute's) list of teachers
+        institute.add_teacher(self)
 
     def set_institute(self, institute):
         self.__institute = institute

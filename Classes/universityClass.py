@@ -15,18 +15,14 @@ class University:
     def get_name(self):
         return self.name
 
-    def add_student(self, students):
-        pass
+    def add_student(self, student):
+        self.students.append(student)
 
-    def delete_students(self, teachers):
-        pass
+    def get_students(self):
+        return self.students
 
-    def add_teacher(self, teachers):
-        # add a teacher object to teachers list
-        # also add this instance of this class as an "institute" for the teacher
-        pass
+    def add_teacher(self, teacher):
+        self.teachers.append(teacher)
 
-    def delete_teachers(self):
-        # delete a teacher object from the teachers list, also set institute of
-        # the teacher to None (or possibly just delete the whole object)
-        pass
+    def get_teachers(self):
+        return self.teachers
