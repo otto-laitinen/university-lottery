@@ -3,7 +3,7 @@ from Classes.studentClass import Student
 from Classes.teacherClass import Teacher
 
 
-def price(winner):
+def price(winner, university):
     if isinstance(winner, Student):
         print(f"Winner is a student with {winner.get_credits()} credits")
         winner.set_credits(winner.get_credits() + 1)
@@ -19,4 +19,18 @@ def price(winner):
         )
 
     else:
-        print(f"{winner.get_first_name()} is a regular person")
+        # Make the Person class object a Student class object (with 0 credits)
+        winner = Student(
+            winner.get_first_name(),
+            winner.get_last_name(),
+            winner.get_age(),
+            None,
+            university,
+            0,
+        )
+        print(
+            f"{winner.get_first_name()} is not a member of any university. They receive a free study place!"
+        )
+        print(
+            f"{winner.get_first_name()} is now a student at {winner.get_institute().get_name()}"
+        )
