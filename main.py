@@ -73,13 +73,10 @@ def main():
 
         # Draw the winner
         winner = lottery(all_contestants)
-<<<<<<< HEAD
-        
-        playsound(Lottery-horns.wav)
-=======
+
 
         playsound("./Lottery-horns.wav")
->>>>>>> b8287b76ddbfac81e8876892a9e834c0ac8632cb
+
 
         print(f"Winner is: {winner.get_first_name()} {winner.get_last_name()}")
 
