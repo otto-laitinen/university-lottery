@@ -29,7 +29,7 @@ with open("last_names.txt", "r") as b:
 
 def main():
     while True:
-        print("                 #### Welcome to TUAS lottery of 2022! ####")
+        print("#### Welcome to TUAS lottery of 2022! ####")
         print(
             "#### The contestants are students,teachers and people from outside the university. ####\n"
         )
@@ -73,8 +73,13 @@ def main():
 
         # Draw the winner
         winner = lottery(all_contestants)
+<<<<<<< HEAD
         
         playsound(Lottery-horns.wav)
+=======
+
+        playsound("./Lottery-horns.wav")
+>>>>>>> b8287b76ddbfac81e8876892a9e834c0ac8632cb
 
         print(f"Winner is: {winner.get_first_name()} {winner.get_last_name()}")
 
@@ -95,7 +100,6 @@ def main():
 
         if not play_again:
             break
-
 
 
 main()
