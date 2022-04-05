@@ -16,7 +16,7 @@ def lottery(contestants):
     for contestant in contestants:
         if contestant.get_age() < 18:
             underage_contestants.append(contestant)
-            contestant.remove(contestant)
+            contestants.remove(contestant)
         else:
             contestant.set_tickets(Lotteryticket(id))
             id += 1
