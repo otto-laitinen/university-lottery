@@ -75,7 +75,7 @@ def main():
         winner = lottery(all_contestants)
 
         # Print the winner and play victory sound
-        print(f"Winner is: {winner.get_first_name()} {winner.get_last_name()}")
+        print(f"\nWinner is: {winner.get_first_name()} {winner.get_last_name()}\n")
         playsound("./Lottery-horns.wav")
 
         # Give the winner a price
@@ -83,7 +83,7 @@ def main():
 
         # Play again
         while True:
-            play_again = input("Play again? (Y for Yes, N for No): ")
+            play_again = input("\nPlay again? (Y for Yes, N for No): ")
             if play_again.lower() == "y":  # Accepts Y or y
                 play_again = True
                 break
@@ -91,7 +91,7 @@ def main():
                 play_again = False
                 break
             else:
-                print("Enter either Y or N")
+                print("\nEnter either Y or N")
 
         if not play_again:
             break
