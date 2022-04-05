@@ -7,6 +7,9 @@ import random
 
 
 def lottery(contestants):
+    # Print the amount of contestants
+    print(f"Total contestants: {len(contestants)}")
+
     # Underage contestants are removed and moved to this list
     underage_contestants = []
 
@@ -23,9 +26,12 @@ def lottery(contestants):
 
     # List of contestants that are not old enough to participate
     amount_of_underage = len(underage_contestants)
-    print(f"{amount_of_underage} underage contestants removed from the lottery")
+    print(f"{amount_of_underage} underage contestants detected and removed")
 
-    # Define winner
+    # Print amount of contestants after removing underage people
+    print(f"Total contestants: {len(contestants)}")
+
+    # Choose winner
     winner = random.choice(contestants)
 
     return winner
