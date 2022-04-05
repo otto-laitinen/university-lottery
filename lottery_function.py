@@ -1,17 +1,22 @@
 # File name: lottery_function.py
-# Author: (use your name, of course)
-# Description: Main function for the university lottery.
+# Author: Otto Laitinen
+# Description: Function to draw the winner
+
 from Classes.lotteryticketClass import Lotteryticket
 import random
 
 
 def lottery(contestants):
-    # Give all contestants a ticket with a unique id
-    id = 0
+    # Underage contestants are removed and moved to this list
     underage_contestants = []
+
+    # Ticket id / number
+    id = 0
+
     for contestant in contestants:
         if contestant.get_age() < 18:
             underage_contestants.append(contestant)
+            contestant.remove(contestant)
         else:
             contestant.set_tickets(Lotteryticket(id))
             id += 1

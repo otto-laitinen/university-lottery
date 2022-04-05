@@ -1,14 +1,14 @@
 # File name: price.py
-# Author: (use your name, of course)
-# Description: Main function for the university lottery.
-from Classes.personClass import Person
+# Author: Otto Laitinen
+# Description: Function to give the winner a price based on which class they belong to
+
 from Classes.studentClass import Student
 from Classes.teacherClass import Teacher
 
 
 def price(winner, university):
 
-    # If winner is a student --> give extra credit
+    # If winner is a student --> 1 extra credit
     if isinstance(winner, Student):
         print(f"Winner is a student with {winner.get_credits()} credits")
         winner.set_credits(winner.get_credits() + 1)
@@ -16,7 +16,7 @@ def price(winner, university):
             f"{winner.get_first_name()} receives 1 extra credit! New credits: {winner.get_credits()} "
         )
 
-    # If winner is a teacher --> give extra day off
+    # If winner is a teacher --> 1 extra day off
     elif isinstance(winner, Teacher):
         print(f"Winner is a teacher with {winner.get_days_off()} days off")
         winner.set_days_off(winner.get_days_off() + 1)
@@ -24,7 +24,7 @@ def price(winner, university):
             f"{winner.get_first_name()} receives 1 extra day off! New amount of days off: {winner.get_days_off()} "
         )
 
-    # If winner is a regular person --> give them a study place
+    # If winner is a regular person --> Study place at university
     else:
         winner = Student(
             winner.get_first_name(),

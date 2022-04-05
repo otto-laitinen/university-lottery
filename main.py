@@ -1,6 +1,6 @@
 # File name: main.py
-# Author: (use your name, of course)
-# Description: Main function for the university lottery.
+# Author: Salli Saarinen, Thomas Rizzi Omura, Otto Laitinen
+# Description: Main function for the university lottery. Creates players and calls the lottery functions.
 
 import random
 from os import path
@@ -33,12 +33,11 @@ def main():
         print(
             "#### The contestants are students,teachers and people from outside the university. ####\n"
         )
+
         university = University("TUAS")
+        students, teachers, others = [], [], []
 
-        students = []
-        teachers = []
-        other_people = []
-
+        # Create 100 random students, 100 teachers, 100 regular people
         for i in range(100):
 
             the_random = Student(
@@ -67,16 +66,17 @@ def main():
                 random.randint(15, 100),
                 None,
             )
-            other_people.append(the_random3)
+            others.append(the_random3)
 
-        all_contestants = students + teachers + other_people
+        # Combine the contestants in one list
+        all_contestants = students + teachers + others
 
         # Draw the winner
         winner = lottery(all_contestants)
 
-        playsound("./Lottery-horns.wav")
-
+        # Print the winner and play victory sound
         print(f"Winner is: {winner.get_first_name()} {winner.get_last_name()}")
+        playsound("./Lottery-horns.wav")
 
         # Give the winner a price
         price(winner, university)
@@ -84,7 +84,7 @@ def main():
         # Play again
         while True:
             play_again = input("Play again? (Y for Yes, N for No): ")
-            if play_again.lower() == "y":  # Accepts either Y or y
+            if play_again.lower() == "y":  # Accepts Y or y
                 play_again = True
                 break
             elif play_again.lower() == "n":
