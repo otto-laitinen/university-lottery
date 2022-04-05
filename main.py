@@ -77,7 +77,7 @@ def main():
 
         # Print the winner and play victory sound
         print(f"\nWinner is: {winner.get_first_name()} {winner.get_last_name()}\n")
-        # playsound("./Lottery-horns.wav")
+        playsound("./Lottery-horns.wav")
 
         # Give the winner a price
         price(winner, university)
